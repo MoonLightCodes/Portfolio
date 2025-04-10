@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        scrollbar-width: none;
+        overflow-x: hidden;
+      }
+      .pssk {
+        scrollbar-width: none;
+      }
+      .pssk2 {
+        overflow-y: hidden;
+      }
+      .cursive {
+        font-family: "MyCursiveFont", cursive;
+      }
+      iframe::-webkit-scrollbar {
+        display: none;
+      }
+      iframe {
+        scrollbar-width: none;
+        overflow: hidden;
+      }
+      .glow {
+        box-shadow: 0px 0px 10px rgb(194, 7, 215), 5px 5px 10px rgb(194, 7, 215),
+          -5px -5px 10px rgb(194, 7, 215);
+      }
+      .glow1 {
+        box-shadow: 0px 0px 10px rgb(143, 4, 235), 5px 5px 30px rgb(143, 4, 235),
+          -5px -5px 30px rgb(143, 4, 235);
+      }
+      .shrink {
+        animation: grow 2s linear;
+      }
+      @keyframes grow {
+        0% {
+          transform: scale(0.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .ps > div {
+        animation: grow linear;
+        animation-timeline: view();
+        will-change: transform;
+        animation-range: entry 0% cover 40%;
+      }
+      .shrink1 {
+        animation: grow linear;
+        animation-timeline: view();
+        will-change: transform;
+        animation-range: entry 0% cover 40%;
+      }
+      .pic {
+        animation: l2r linear;
+        animation-timeline: view();
+        will-change: transform;
+        animation-range: entry 0% cover 40%;
+      }
+      .abt {
+        animation: r2l linear;
+        animation-timeline: view();
+        will-change: transform;
+        animation-range: entry 0% cover 40%;
+      }
+      .abt1 {
+        animation: b2t linear;
+        animation-timeline: view();
+        will-change: transform;
+        animation-range: entry 0% cover 40%;
+      }
+      @keyframes b2t {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+      @keyframes l2r {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+      @keyframes r2l {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-r from-slate-800 to-slate-600 select-none">
+    <header
+      class="flex justify-between p-3 shadow-2xl sticky top-0 z-1000 shadow-slate-600 rounded-xl bg-gradient-to-r from-slate-600 to-slate-700 m-1 select-none flex-col lg:flex-row gap-2 mt-5"
+    >
+      <div
+        class="px-6 py-2  rounded-full bg-gradient-to-r from-slate-800 to-slate-800 text-white font-extrabold text-xl shadow-lg transition-all duration-500 mx-auto lg:mx-1"
+      >
+        POORNA
+      </div>
+
+      <div
+        class="lg:gap-4 gap-0 text-white font-bold text-shadow-lg font-['Segoe Script',cursive] tracking-normal lg:trackng-wider NAVIGATION flex mx-auto lg:mx-1"
+      >
+        <div
+          class="cursor-pointer hover:bg-gradient-to-r p-2 rounded-full hover:scale-[1.1] hover:from-purple-500 hover:to-pink-500 transition-all duration-500"
+          onclick="home()"
+        >
+          HOME
+        </div>
+        <div
+          class="cursor-pointer hover:bg-gradient-to-r p-2 rounded-full hover:scale-[1.1] hover:from-purple-500 hover:to-pink-500 transition-all duration-500"
+          onclick="about()"
+        >
+          ABOUT
+        </div>
+        <div
+          class="cursor-pointer hover:bg-gradient-to-r p-2 rounded-full hover:scale-[1.1] hover:from-purple-500 hover:to-pink-500 transition-all duration-500"
+          onclick="portfolio()"
+        >
+          PORTFOLIO
+        </div>
+        <div
+          class="cursor-pointer hover:bg-gradient-to-r p-2 rounded-full hover:scale-[1.1] hover:from-purple-500 hover:to-pink-500 transition-all duration-500"
+          onclick="contact()"
+        >
+          CONTACT
+        </div>
+      </div>
+    </header>
+    <main class="flex justify-center items-center h-[80vh]">
+      <div
+        class="shrink border-2 p-10 rounded-full m-4 border-indigo-500 glow1 flex flex-col gap-6"
+      >
+        <div class="flex gap-6 mx-auto justify-center">
+          <div>
+            <a href="https://leetcode.com/u/pcrcodes/">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                alt="LeetCode Logo"
+                width="50"
+                class="rounded-full hover:scale-[1.1] transition-all duration-500 glow cursor-pointer"
+            /></a>
+          </div>
+          <div>
+            <a href="https://github.com/moonLightCodes">
+              <img
+                src="https://th.bing.com/th/id/OIP.XAiOipVsZBpjL0AVR1qhEgHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="GitHub Logo"
+                width="50"
+                class="rounded-full hover:scale-[1.1] transition-all duration-500 glow cursor-pointer"
+            /></a>
+          </div>
+        </div>
+        <div>
+          <h1 class="text-4xl font-extrabold text-white">Welcome to my</h1>
+          <h1
+            class="text-4xl text-transparent font-extrabold ml-4 bg-clip-text bg-gradient-to-r from-[#df1edf] to-[#f0128cd8]"
+          >
+            Portfolio website..
+          </h1>
+        </div>
+        <div
+          class="flex shadow-lg justify-center gap-3 mt-2 bg-gradient-to-r p-3 cursor-pointer rounded-full from-purple-500 to-pink-500 animation-ping transition-all duration-500 hover:scale-[1.1]"
+        >
+          <img
+            src="https://wallpapercave.com/wp/wp8055298.png"
+            alt="earth"
+            class="w-10 rounded-full"
+          />
+          <div
+            class="text-2xl text-transparent bg-gradient-to-r from-slate-700 to-slate-800 bg-clip-text font-bold tracking-widest outline-none select-none border-0 ring-0"
+          >
+            <a class="outline-0" href="https://www.hydragreens.org/">
+              Sign-up</a
+            >
+          </div>
+        </div>
+        <h1 class="text-center text-xl font-bold text-slate-300 cursive">
+          Donate to plant a Tree !
+        </h1>
+      </div>
+    </main>
+    <main class="flex justify-center items-center h-[100vh] m-1 main2">
+      <div class="flex justify-between flex-col lg:flex-row gap-4 align-center">
+        <div
+          class="w-[30vw] lg:w-[50vw] lg:mx-auto sm:mx-auto max-w-[500px] pic lg:ml-2"
+        >
+          <!-- <img
+            src="./profilepic1.jpg"
+            alt="profilepic"
+            class="rounded-full glow1 border-3 border-slate-100"
+          /> -->
+
+          <iframe
+            src="./laptopCanvas/index.html"
+            frameborder="0"
+            onload="this.scrollBy(0,200)"
+            class="w-[400px] h-[400px] lg:scale=[1] scale-[0.75] block mx-auto"
+          ></iframe>
+        </div>
+        <div class="m-2 abt">
+          <h1 class="text-xl lg:text-2xl text-white font-bold pb-1 lg:pb-2">
+            Hey it's Me..
+          </h1>
+          <h1
+            class="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-pink-700 pb-1 lg:pb-2 to-violet-800 bg-clip-text text-transparent"
+          >
+            Poorna Chander
+          </h1>
+          <h1 class="text-xl lg:text-3xl text-white font-bold pb-1 lg:pb-2">
+            MERN stack developer
+          </h1>
+          <h1 class="text-sm lg:text-2xl text-white pb-2">
+            I've built powerful and reliable websites using the MERN stack, and
+            all my clients are thrilled with the results! 🚀
+          </h1>
+          <div class="flex gap-2 lg:gap-4 flex-wrap text-sm lg:text-lg">
+            <div class="p-2 px-3 bg-slate-800 rounded-full text-white">
+              React.js
+            </div>
+            <div class="p-2 px-3 bg-slate-800 rounded-full text-white">
+              Node.js
+            </div>
+            <div class="p-2 px-3 bg-slate-800 rounded-full text-white">
+              MongoDB
+            </div>
+            <div class="p-2 px-3 bg-slate-800 rounded-full text-white">
+              Express
+            </div>
+            <div class="p-2 px-3 bg-slate-800 rounded-full text-white">
+              Java
+            </div>
+            <div class="p-2 px-3 bg-slate-800 rounded-full text-white">
+              SpringBoot
+            </div>
+          </div>
+          <button
+            class="text-slate-100 mt-3 hover:scale-[1.1] transition-all duration-500 font-bold shadow-lg p-3 bg-gradient-to-br from-indigo-500 to-pink-500 rounded-full"
+            onclick="makeCall()"
+          >
+            Let's Book A Call
+            <span class="text-xl font-extrabold">&#8594;</span>
+          </button>
+
+          <div class="flex gap-6 mt-5 mx-2">
+            <div>
+              <a href="https://www.youtube.com/@codingmawa">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="Youtube Logo"
+                width="50"
+                class="rounded-full h-[50px] hover:scale-[1.1] transition-all duration-500 glow cursor-pointer"
+              /></a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/poornachander_reddy_015?igsh=Ynp2enhuY3Q4c2Y0">
+              <img
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAEOAPwDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAYHAQQFAwL/xABLEAABAwMABQYHCwkIAwAAAAABAAIDBAURBhIhMWETQVFxgZEUIjJSk6GxFRY1QlVydLKz0eEjM1Nic5LB0vAXJENUY3WCogej8f/EABsBAQACAwEBAAAAAAAAAAAAAAADBAIFBgEH/8QANhEAAgIBAQUEBwgDAQEAAAAAAAECAwQRBRITITFBUXGxBhQiYZGhwRUjMlJygdHwNEKC4fH/2gAMAwEAAhEDEQA/ALbREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEWCQASSAACSTsAA5yVGrnplZKEujpia6cbCKdwEDT+tMQR3ByzhXOx6QWp42l1JMviSWKFpfLJHGwb3SOaxo7XbFVldphpHVlwjnZRxHZqUjcOxxlfl+erC4Mss1Q8vnllmed7pnukd3vJK2ENnTf43oRO3uRb82kOjcBxJdaHPRHM2U/8Arytc6W6JjZ7pM7IKkjvEaqXCYVhbOr7ZMx35vsLdZpTotIQBdKcZ3co2WP1vaF0ILjbKogU1bSTE7hDPE93c05VJ96ao34GeoLx7Oh/rIyUp9qL2RU1R3q+UGqKWvqWsbuje/lYvRy5b6lKbfp48FrLpSAjcZ6PYRxdC8+x3YqdmDZD8PMlT1J4i1KG4264xctRVMczB5WocPYeh7HYcO0LbVJprkz0IiLwBERAEREAREQBERAEREAREQBERAEREAXMu16t1nh5SqeTI/PIQR4M0xHmt5h0k7O/B1dINIaayQhjQ2WvmaTTwEnVa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"
+                alt="Instagram Logo"
+                width="50"
+                class="rounded-full hover:scale-[1.1] transition-all duration-500 glow cursor-pointer"
+              />
+            </a>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/in/poorna-chander-626a44175?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+              <img
+                src="https://th.bing.com/th/id/OIP.svgoUT8hREgpphnOVj1NTgHaHa?w=168&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="Linkdin Logo"
+                width="50"
+                class="rounded-full hover:scale-[1.1] transition-all duration-500 glow cursor-pointer"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div
+      class="border-3 m-2 border-slate-100 rounded-3xl shadow-2xl abt1 mb-2 main3"
+    >
+      <div class="text-white p-2">
+        <h1
+          class="text-4xl text-center mb-2 font-bold bg-gradient-to-r from-slate-100 to-slate-800 bg-clip-text text-transparent"
+        >
+          About me!
+        </h1>
+        <p class="text-xl text-center text-wrap">
+          I create visually striking, high-performance, and fully responsive
+          websites that seamlessly integrate design with functionality. My focus
+          is on building fast, user-friendly, and SEO-optimized web experiences
+          that drive business growth. Let’s bring your vision to life with a
+          beautiful, interactive, and powerful website that stands out in the
+          digital world!
+        </p>
+      </div>
+      <button
+        class="m-2 p-2 text-white block mx-auto border-3 border-sky-500 hover:scale-[1.05] rounded-full bg-gradient-to-br cursor-pointer from-red-400 to-pink-500 font-bold active:scale-[0.95] transition-all duration-500 shadow-2xl"
+        onclick="download()"
+      >
+        <span class="scale-[2] text-xl">&darr;</span>
+        Download CV
+      </button>
+    </div>
+    <div class="mt-4 mx-2">
+      <h1
+        class="bg-clip-text bg-gradient-to-r transition-all duration-500 pic from-rose-400 to-fuchsia-600 mb-2 text-transparent text-4xl font-bold text-center tracking-widest"
+      >
+        Portfolio Showcase
+      </h1>
+      <h1 class="text-center text-white text-xl">
+        "Explore My Journey Through Projects, Certifications, and Technical
+        Experience. Each Selection Represents a Milestone in My Continuous
+        Learning Path."
+      </h1>
+    </div>
+    <div>
+      <div
+        class="flex justify-evenly gap-10 mt-4 shrink1 shadow-inner-lg p-4 rounded-full bg-slate-400 lg:w-[60%] lg:mx-auto"
+      >
+        <div>
+          <input
+            type="radio"
+            name="topic"
+            id="projects"
+            class="hidden peer"
+            checked
+          />
+          <label
+            for="projects"
+            onclick="project()"
+            class="p-2 text-2xl text-white cursor-pointer font-bold tracking-wider bg-gradient-to-br from-slate-600 to-slate-600 rounded-full peer-checked:from-rose-700 peer-checked:to-sky-800 transition-all duration-500"
+            >Projects</label
+          >
+        </div>
+        <div>
+          <input type="radio" name="topic" id="skills" class="hidden peer" />
+          <label
+            for="skills"
+            onclick="skills()"
+            class="p-2 text-2xl text-white cursor-pointer font-bold tracking-wider bg-gradient-to-br from-slate-600 to-slate-600 rounded-full peer-checked:from-rose-700 peer-checked:to-sky-800 transition-all duration-500"
+            >My Skills</label
+          >
+        </div>
+      </div>
+      <br />
+      <div
+        class="w-[80%] overflow-x-hidden pssk p-2 border-2 lg:h-[85vh] h-[65vh] mx-auto mt-4 rounded-3xl shadow-2xl bg-slate-600 border-slate-100 glow mb-3 abt1"
+      >
+        <div class="flex justify-evenly gap-3 h-full w-[200%]">
+          <div
+            class="h-full w-[40%] rounded-3xl ps transition-all duration-500"
+          >
+            <div class="h-full p-3 bg-slate-100 rounded-3xl mb-3">
+              <a href="https://moonlightcodes.github.io/BloodBud/">
+                <img
+                  src="./projects/bloodbud.png"
+                  alt="pic"
+                  class="h-[70%] w-[80%] mx-auto rounded-3xl"
+                />
+                <p
+                  class="text-4xl font-extrabold text-center bg-gradient-to-br from-red-600 to-red-300 bg-clip-text text-transparent"
+                >
+                  Bloodbud
+                </p>
+                <p class="text-xl text-center truncate">
+                  <i
+                    >BloodBug is a fullstack,responsive, blood sharing plotform
+                    when one can register as a donar or can find details of any
+                    donar</i
+                  >
+                </p>
+              </a>
+            </div>
+            <div class="h-full p-3 bg-slate-100 rounded-3xl mb-3">
+              <a href="https://moonlightcodes.github.io/Contacts-App/">
+                <img
+                  src="./projects/contactsapp.png"
+                  alt="pic"
+                  class="h-[70%] w-[80%] mx-auto rounded-3xl"
+                />
+                <p
+                  class="text-4xl font-extrabold text-center bg-gradient-to-br from-[rgba(211,113,211,1)] to-[#dd36dd] bg-clip-text text-transparent"
+                >
+                  Contacts App
+                </p>
+                <p class="text-lg text-center truncate">
+                  <i
+                    >Contacts App is a full stack,responsive, website where one
+                    can log or rigister and can save contacts and can perform
+                    CURD operations</i
+                  >
+                </p>
+              </a>
+            </div>
+            <div class="h-full p-3 bg-slate-100 rounded-3xl mb-3">
+              <a href="https://moonlightcodes.github.io/SUNFLIX/">
+                <img
+                  src="./projects/sunflix.png"
+                  alt="pic"
+                  class="h-[70%] w-[80%] mx-auto rounded-3xl"
+                />
+                <p
+                  class="text-4xl font-extrabold text-center bg-gradient-to-br from-[rgba(54,135,157,1)] to-[#13343e] bg-clip-text text-transparent"
+                >
+                  Sunflix
+                </p>
+                <p class="text-lg text-center truncate">
+                  <i
+                    >Sunflix, fullstack ,responsive, OTT plotform where a user
+                    can watch a movie for free. for now it streams one movie
+                    using amazon AWS S3 as CDN
+                  </i>
+                </p>
+              </a>
+            </div>
+            <div class="h-full p-3 bg-slate-100 rounded-3xl mb-3">
+              <a href="https://moonlightcodes.github.io/Smart-Ants/">
+                <img
+                  src="./projects/smartants.png"
+                  alt="pic"
+                  class="h-[70%] w-[80%] mx-auto rounded-3xl"
+                />
+                <p
+                  class="text-4xl font-extrabold text-center bg-gradient-to-br from-slate-800 to-slate-600 bg-clip-text text-transparent"
+                >
+                  Smart Ants
+                </p>
+                <p class="text-sm font-bold text-center truncate">
+                  <i
+                    >Smart Ants is a play-full plotform where a user can observe
+                    the simulation of Genetic Algorithm which include Crossing,
+                    Strong-patner, Mutation, Mating-pool, Selection,
+                    DNA-crossover
+                  </i>
+                </p>
+              </a>
+            </div>
+            <div class="h-full p-3 bg-slate-100 rounded-3xl mb-3">
+              <a href="https://moonlightcodes.github.io/Weather-app/">
+                <img
+                  src="./projects/weatherapp.png"
+                  alt="pic"
+                  class="h-[70%] w-[80%] mx-auto rounded-3xl"
+                />
+                <p
+                  class="text-4xl font-extrabold text-center bg-gradient-to-br from-[#555f8d] to-[#555f8d] bg-clip-text text-transparent"
+                >
+                  Weather App
+                </p>
+                <p class="text-lg font-bold text-center truncate">
+                  <i
+                    >Weather is a responsive webpage where a user can get the
+                    weather at any location on earth which uses a API to fetch
+                    Details of Weather</i
+                  >
+                </p>
+              </a>
+            </div>
+            <div class="h-full p-3 bg-slate-100 rounded-3xl mb-3">
+              <a href="https://github.com/MoonLightCodes?tab=repositories">
+                <img
+                  src="./projects/git.png"
+                  alt="pic"
+                  class="h-[70%] w-[80%] mx-auto rounded-3xl"
+                />
+                <p
+                  class="text-4xl font-extrabold text-center bg-gradient-to-br from-[#555f8d] to-[#555f8d] bg-clip-text text-transparent"
+                >
+                  GIT
+                </p>
+                <p class="text-2xl font-bold text-center truncate">
+                  <i>Visit My Git Page to know all of my other projects</i>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div
+            class="h-auto w-[40%] bg-slate-600 rounded-3xl overflow-y-hidden sk mt-2"
+          >
+            <div class="h-full lg:w-[auto] w-[100%] p-3">
+              <img
+                src="./projects/techstack2.png"
+                alt="pic"
+                class="h-full w-[95%] rounded-3xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div
+        class="flex flex-col p-3 items-center lg:w-[50%]  rounded-4xl border-2 border-slate-100 m-4 main4 lg:mx-auto"
+      >
+        <h1
+          class="text-4xl font-extrabold text-transparent bg-gradient-to-r from-indigo-500 to-violet-800 bg-clip-text"
+        >
+          Contact me
+        </h1>
+        <br />
+        <div>
+          <div class="text-4xl text-white mb-2">☎ +91-9182028863</div>
+          <br />
+          <div class="text-2xl lg:text-4xl text-white">
+            📧 Poornachander00015@gmail.com
+          </div>
+        </div>
+        <br />
+        <div class="bg-gradient-to-r from-rose-400 to-blue-500 p-5 rounded-3xl w-[90%]">
+          <h1 class="font-extrabold text-center text-4xl mb-4 text-shadow-lg text-[rgba(2,25,205,0.5)]">Send a Query</h1>
+          <form class="flex flex-col gap-6">
+            <input
+              name="name"
+              id="name"
+              type="text"
+              class="placeholder:text-2xl placeholder:font-bold placeholder:text-slate-700 border-2 p-3 rounded-lg border-slate-700"
+              placeholder="Enter Your Name"
+            />
+            <input
+              name="email"
+              name="email"
+              type="email"
+              class="placeholder:text-2xl placeholder:font-bold placeholder:text-slate-700 border-2 p-3 rounded-lg border-slate-700"
+              placeholder="Enter Email"
+            />
+            <textarea
+              name="message"
+              id="message"
+              class="placeholder:text-2xl h-[200px] placeholder:font-bold placeholder:text-slate-700 border-2 p-3 rounded-lg border-slate-700"
+              placeholder="Enter Your Query"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-gradient-to-r from-green-400 to-blue-800 text-white text-2xl font-bold py-2 px-4 rounded-full hover:scale-[1.05] transition-all duration-500 active:scale-[0.95]"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-slate-700 text-white text-center py-6 mt-4 text-3xl ">
+      <p class="text-lg font-semibold">© 2025 All Rights Reserved | Developed by Poorna</p>
+      <div class="flex justify-center gap-4 mt-2">
+      <a href="https://github.com/moonLightCodes" target="_blank" class="hover:underline">GitHub</a>
+      <a href="https://www.linkedin.com/in/poornachander" target="_blank" class="hover:underline">LinkedIn</a>
+      <a href="https://leetcode.com/u/pcrcodes/" target="_blank" class="hover:underline">LeetCode</a>
+      </div>
+      <p class="text-sm mt-2">Feel free to connect with me on the above platforms!</p>
+    </footer>
+    <script defer src="script.js"></script>
+  </body>
+</html>
