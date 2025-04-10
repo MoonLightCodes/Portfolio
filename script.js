@@ -1,6 +1,6 @@
 function download(){
     const a = document.createElement('a');
-    a.href = './d.txt';
+    a.href = './pic.jpg';
     a.download = 'resume.txt';
     document.body.appendChild(a);
     a.click();
