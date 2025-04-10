@@ -48,17 +48,28 @@ let index = 0;
 let stopScroll = false;
 let  scroller;
 let scrollCaller;
-ps.addEventListener('wheel',()=>{
+ps.addEventListener('wheel', () => {
     clearTimeout(scroller);
     clearTimeout(scrollCaller);
     stopScroll = true;
     ps.style.transform = `translateY(0%)`;
-    scrollCaller=setTimeout(()=>{
-        stopScroll=false;
-        index=ps.children.length - 1;
+    scrollCaller = setTimeout(() => {
+        stopScroll = false;
+        index = ps.children.length - 1;
         autoScroll();
+    }, 5000);
+});
 
-    },5000)
+ps.addEventListener('touchstart', () => {
+    clearTimeout(scroller);
+    clearTimeout(scrollCaller);
+    stopScroll = true;
+    ps.style.transform = `translateY(0%)`;
+    scrollCaller = setTimeout(() => {
+        stopScroll = false;
+        index = ps.children.length - 1;
+        autoScroll();
+    }, 5000);
 });
 
 function autoScroll(){
