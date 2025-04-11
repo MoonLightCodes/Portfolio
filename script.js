@@ -1,7 +1,7 @@
 function download(){
     const a = document.createElement('a');
-    a.href = './pic.jpg';
-    a.download = 'resume.txt';
+    a.href = "./Resume Web D 2025.docx";
+    a.download = 'poornachander-resume.docx';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
